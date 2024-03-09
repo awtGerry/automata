@@ -62,6 +62,7 @@ estado 18: (∑ -e-w a estado 1) (e a estado 15) (w a estado 12)
 
 std::string word = "";
 int current_index = 0;
+int ebay_count = 0, web_count = 0;
 bool accept, find = false;
 
 int accept_control();
@@ -70,6 +71,16 @@ void start_state();
 void print_state(std::string name) // print state
 {
     std::cout << word.substr(0, current_index) << " Currently in: " << name << " state" << std::endl;
+}
+
+int get_ebay_count()
+{
+    return ebay_count;
+}
+
+int get_web_count()
+{
+    return web_count;
 }
 
 /* EBAY */
@@ -88,6 +99,8 @@ int main(int argc, char *argv[])
 {
     word = "webay";
     start_state();
+    std::cout << "Ebay count: " << get_ebay_count() << std::endl;
+    std::cout << "Web count: " << get_web_count() << std::endl;
     return 0;
 }
 
@@ -242,6 +255,7 @@ void get_ebay_17()
 
 void get_ebay_18()
 {
+    ebay_count+=1; // if it gets here, it means that it found the word ebay
     print_state("18");
     accept = true;
     int ctrl_result = accept_control();
@@ -281,10 +295,10 @@ void get_web_12()
     int ctrl_result = accept_control();
     if (ctrl_result == 0)
     {
-        if (word[current_index] == 'e') // go to 15 state
+        if (word[current_index] == 'e') // go to 135 state
         {
             current_index++;
-            get_ebay_15();
+            get_web_135();
         }
         else if (word[current_index] == 'w') // go to 12 state
         {
@@ -339,6 +353,7 @@ void get_web_135()
 
 void get_web_146()
 {
+    web_count+=1; // if it reaches this state, it means that it found the word web
     print_state("146");
     accept = false;
     int ctrl_result = accept_control();
