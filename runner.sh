@@ -6,6 +6,11 @@ case $1 in
         ;;
     2)
         echo "Running NFA to DFA"
+        javac -d bin src/GUI.java
+        java -cp bin GUI
+        ;;
+    3)
+        echo "Running NFA to DFA"
         javac -d bin src/NFAtoDFA.java
         java -cp bin NFAtoDFA
         ;;
