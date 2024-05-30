@@ -1,149 +1,148 @@
 use std::io::{self, Write};
 
-fn crear_matriz(filas: usize, columnas: usize) -> Vec<Vec<String>> {
-    let mut matriz = vec![vec![" ".to_string(); columnas + 1]; filas + 1];
-    matriz
-}
+/* struct Automata {
+    states: Vec<String>,
+    paths: Vec<String>,
+    transitions: Vec<Vec<String>>,
+} */
 
-fn ingresar_estados(matriz: &mut Vec<Vec<String>>) {
-    println!("\nIngresa los estados, separados por espacios:");
-    let estados = leer_entrada();
-    for (i, estado) in estados.iter().enumerate() {
-        matriz[i + 1][0] = estado.to_string();
+fn states(matrix: &mut Vec<Vec<String>>) {
+    println!("Input all states (example: q0 q1 q2):");
+    let states = usr_input();
+    for (i, estado) in states.iter().enumerate() {
+        matrix[i + 1][0] = estado.to_string();
     }
 }
 
-fn ingresar_alfabeto(matriz: &mut Vec<Vec<String>>, columnas: usize) {
-    println!("\nIngresa los elementos del alfabeto, separados por espacios:");
-    let elementos = leer_entrada();
-    for (j, elemento) in elementos.iter().enumerate() {
-        matriz[0][j + 1] = elemento.to_string();
+fn path(matrix: &mut Vec<Vec<String>>) {
+    println!("Input all paths (example: 0 1):");
+    let path = usr_input();
+    for (i, path) in path.iter().enumerate() {
+        matrix[0][i + 1] = path.to_string();
     }
 }
 
-fn ingresar_transiciones(matriz: &mut Vec<Vec<String>>) {
-    let filas = matriz.len() - 1;
-    let columnas = matriz[0].len() - 1;
-    for i in 0..filas {
-        for j in 0..columnas {
-            let estado = &matriz[i + 1][0];
-            let elemento = &matriz[0][j + 1];
-            print!("Ingrese la transición para el estado {} y el elemento {}: ", estado, elemento);
-            io::stdout().flush().unwrap();
-            let mut transicion = String::new();
-            io::stdin().read_line(&mut transicion).unwrap();
-            matriz[i + 1][j + 1] = transicion.trim().to_string();
+fn transitions(matrix: &mut Vec<Vec<String>>) {
+    let rows = matrix.len();
+    let columns = matrix[0].len();
+    for i in 1..=rows {
+        for j in 1..=columns {
+            let state = &matrix[i][0];
+            let path = &matrix[0][j];
+            println!("Input transitions for state {} with path {} (example: q0 q1):", state, path);
+            let transitions = usr_input();
+            matrix[i][j] = transitions.join(" ");
         }
     }
 }
 
-fn verificar_transiciones(matriz: &mut Vec<Vec<String>>) {
-    let mut nuevas_filas = Vec::new();
-    for i in 1..matriz.len() {
-        for j in 1..matriz[0].len() {
-            if matriz[i][j].contains(' ') && matriz[i][j].split_whitespace().count() >= 2 {
-                let elementos_adicionales = matriz[i][j].split_whitespace().collect::<Vec<&str>>();
-                let mut nueva_fila = vec![" ".to_string(); matriz[0].len()];
-                nueva_fila[0] = elementos_adicionales.join(" ");
-                nuevas_filas.push((i + 1, nueva_fila));
+fn verify(matrix: &mut Vec<Vec<String>>) {
+    let mut rows = Vec::new();
+    for i in 1..matrix.len() {
+        for j in 1..matrix[0].len() {
+            if matrix[i][j].contains(' ') && matrix[i][j].split_whitespace().count() >= 2 {
+                let new_s = matrix[i][j].split_whitespace().collect::<Vec<&str>>();
+                let mut new_row = vec![" ".to_string(); matrix[0].len()];
+                new_row[0] = new_s.join(" ");
+                rows.push((i + 1, new_row));
             }
         }
     }
-    for (index, (pos, fila)) in nuevas_filas.iter().enumerate() {
-        matriz.insert(*pos + index, fila.clone());
+    for (index, (pos, row)) in rows.iter().enumerate() {
+        matrix.insert(*pos + index, row.clone());
     }
 }
 
-fn imprimir_matriz(matriz: &Vec<Vec<String>>) {
-    for fila in matriz {
-        for elemento in fila {
-            print!("{}\t", elemento);
+fn print(matrix: &Vec<Vec<String>>) {
+    for row in matrix {
+        for state in row {
+            print!("{}\t", state);
         }
         println!();
     }
 }
 
-fn convertir_afnd_a_afd(matriz: &Vec<Vec<String>>) -> (Vec<Vec<String>>, Vec<Vec<String>>, Vec<String>) {
-    let estados_afnd = matriz.iter().skip(1).map(|fila| fila[0].clone()).collect::<Vec<String>>();
-    let alfabeto = matriz[0].iter().skip(1).map(|elemento| elemento.clone()).collect::<Vec<String>>();
+fn nfa_dfa(matrix: &Vec<Vec<String>>) -> (Vec<Vec<String>>, Vec<Vec<String>>, Vec<String>) {
+    let nfa_states = matrix.iter().skip(1).map(|fila| fila[0].clone()).collect::<Vec<String>>();
+    let paths = matrix[0].iter().skip(1).map(|elemento| elemento.clone()).collect::<Vec<String>>();
 
-    let mut transiciones_afnd = std::collections::HashMap::<(String, String), Vec<String>>::new();
-    for i in 1..matriz.len() {
-        let estado = &matriz[i][0];
-        for j in 1..matriz[0].len() {
-            let simbolo = &matriz[0][j];
-            let transicion = matriz[i][j].split_whitespace().map(|s| s.to_string()).collect::<Vec<String>>();
-            if !transicion.is_empty() {
-                transiciones_afnd.insert((estado.clone(), simbolo.clone()), transicion);
+    let mut nfa_transitions = std::collections::HashMap::<(String, String), Vec<String>>::new();
+    for i in 1..matrix.len() {
+        let states = &matrix[i][0];
+        for j in 1..matrix[0].len() {
+            let sym = &matrix[0][j];
+            let transition = matrix[i][j].split_whitespace().map(|s| s.to_string()).collect::<Vec<String>>();
+            if !transition.is_empty() {
+                nfa_transitions.insert((states.clone(), sym.clone()), transition);
             }
         }
     }
 
-    let estado_inicial = vec![matriz[1][0].clone()];
-    let estados_finales = matriz.iter().skip(1).filter(|fila| fila[0].contains(' ')).map(|fila| fila[0].clone()).collect::<Vec<String>>();
+    let first_state = vec![matrix[1][0].clone()];
+    let last_state = matrix.iter().skip(1).filter(|fila| fila[0].contains(' ')).map(|fila| fila[0].clone()).collect::<Vec<String>>();
 
-    let mut transiciones_afd = std::collections::HashMap::<Vec<String>, std::collections::HashMap<String, Vec<String>>>::new();
-    let mut estados_afd = Vec::new();
-    let mut cola_estados = vec![estado_inicial.clone()];
-    while let Some(estado_actual) = cola_estados.pop() {
-        let mut transiciones_estado = std::collections::HashMap::<String, Vec<String>>::new();
-        for simbolo in &alfabeto {
-            let mut alcanzables = vec![];
-            for estado in &estado_actual {
-                if let Some(transicion) = transiciones_afnd.get(&(estado.clone(), simbolo.clone())) {
-                    alcanzables.extend(transicion.clone());
+    let mut dfa_states = Vec::new();
+    let mut dfa_transitions = std::collections::HashMap::<Vec<String>, std::collections::HashMap<String, Vec<String>>>::new();
+    let mut states_list = vec![first_state.clone()];
+    while let Some(state) = states_list.pop() {
+        let mut state_transitions = std::collections::HashMap::<String, Vec<String>>::new();
+        for sym in &paths {
+            let mut reachables = vec![];
+            for point in &state {
+                if let Some(t) = nfa_transitions.get(&(point.clone(), sym.clone())) {
+                    reachables.extend(t.clone());
                 }
             }
-            let mut estado_afd = alcanzables.clone();
-            estado_afd.sort();
-            estado_afd.dedup();
-            if !estado_afd.is_empty() && !estados_afd.contains(&estado_afd) {
-                estados_afd.push(estado_afd.clone());
-                cola_estados.push(estado_afd.clone());
+            let mut dfa = reachables.clone();
+            dfa.sort();
+            dfa.dedup();
+            if !dfa.is_empty() && !dfa_states.contains(&dfa) {
+                dfa_states.push(dfa.clone());
+                states_list.push(dfa.clone());
             }
-            transiciones_estado.insert(simbolo.clone(), estado_afd.clone());
+            state_transitions.insert(sym.clone(), dfa.clone());
         }
-        transiciones_afd.insert(estado_actual.clone(), transiciones_estado);
+        dfa_transitions.insert(state.clone(), state_transitions);
     }
-    let estados_finales_afd = estados_afd.iter().filter(|estado| estados_finales.iter().any(|fin| estado.contains(&fin))).cloned().collect::<Vec<Vec<String>>>();
+    let final_states = dfa_states.iter().filter(|estado| last_state.iter().any(|fin| estado.contains(&fin))).cloned().collect::<Vec<Vec<String>>>();
 
-    println!("\nEstados del AFD:");
-    for estado in &estados_afd {
-        println!("{:?}", estado);
+    println!("DFA:");
+    for state in &dfa_states {
+        println!("{:?}", state);
     }
 
-    println!("\nTransiciones del AFD:");
-    for (estado, transiciones) in &transiciones_afd {
-        for (simbolo, alcanzables) in transiciones {
-            println!("{:?} -> {:?} -> {:?}", estado, simbolo, alcanzables);
+    println!("\nDFA transitions:");
+    for (state, t) in &dfa_transitions {
+        for (sym, reachs) in t {
+            println!("{:?} -> {:?} -> {:?}", state, sym, reachs);
         }
     }
 
-    println!("\nEstados finales del AFD:");
-    for estado in &estados_finales_afd {
-        println!("{:?}", estado);
+    println!("\nFinal states:");
+    for state in &final_states {
+        println!("{:?}", state);
     }
 
-    (estados_afd, estados_finales_afd, alfabeto)
+    (dfa_states, final_states, paths)
 }
 
-fn leer_entrada() -> Vec<String> {
-    let mut entrada = String::new();
-    io::stdin().read_line(&mut entrada).unwrap();
-    entrada.trim().split_whitespace().map(|s| s.to_string()).collect()
+fn usr_input() -> Vec<String> {
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).unwrap();
+    input.trim().split_whitespace().map(|s| s.to_string()).collect()
 }
 
 fn main() {
-    println!("Ingresa el número de estados: ");
-    let filas: usize = leer_entrada()[0].parse().unwrap();
-    println!("Ingresa el tamaño del alfabeto: ");
-    let columnas: usize = leer_entrada()[0].parse().unwrap();
+    println!("Ammount of states: ");
+    let filas: usize = usr_input()[0].parse().unwrap();
+    println!("Ammount of paths:");
+    let columnas: usize = usr_input()[0].parse().unwrap();
 
-    let mut matriz = crear_matriz(filas, columnas);
+    let mut matrix = vec![vec![" ".to_string(); columnas + 1]; filas + 1];
 
-    ingresar_estados(&mut matriz);
-    ingresar_alfabeto(&mut matriz, columnas);
-    ingresar_transiciones(&mut matriz);
-    verificar_transiciones(&mut matriz);
-    convertir_afnd_a_afd(&matriz);
+    states(&mut matrix);
+    path(&mut matrix);
+    transitions(&mut matrix);
+    verify(&mut matrix);
+    nfa_dfa(&matrix);
 }
