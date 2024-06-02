@@ -1,8 +1,11 @@
 [package]
-name = "rsauto"
+name = "automata"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+iced = "0.12.1"
+rfd = "0.14.1"
+tokio = { version = "1.38.0", features = ["full"] }

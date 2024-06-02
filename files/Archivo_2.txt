@@ -1,0 +1,52 @@
+main {
+	int dat.o
+	double numer__o
+	String texto = "HolaMundo"
+
+	switch ( numero ) {
+		case 5 
+			if ( 3.5 >= 8 && dato < 16 ) {
+			/*Esto_deberia_funcionar()*/
+			/*Para_el_automata{}*/
+			valor = 18 * 5
+			}
+		case 3
+			for ( i = 0 i < 7 || j > 18 ) {
+			i = i - -3.16
+			}
+		default
+			while ( num < 3 )
+			num --
+			break
+
+	/*Se termino
+
+	}
+}
+-----------------------------------
+Palabras reservadas : 12
+Identificadores : 13
+Operadores Relacionales : 5
+Operadores Lógicos : 2
+Operadores Aritméticos : 2
+Asignaciones : 4
+Número Enteros : 10
+Números Decimales : 2
+Incremento : 0
+Decremento : 1
+Cadena de caracteres : 1
+Comentario: 2
+Comentario de Linea : 0
+Paréntesis : 8
+Llaves : 8
+Errores : 2
+
+
+
+
+
+
+			
+
+
+

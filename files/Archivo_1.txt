@@ -1,0 +1,32 @@
+/*EsteArchivoEsDeFacil_Lectura_Para_el_Aut%mata*/
+
+if ( numero >= 17.34 ) {
+	dato = 25..18
+	print ( "Hola_Mundo" )
+	valor ++
+	}
+
+//Otro_Comentario
+	
+while ( dato != hola && valor <. 5 ) { 
+	x = dato - numero 
+	valor --
+}
+
+-----------------------------------------
+Palabras reservadas : 3
+Identificadores : 10
+Operadores Relacionales : 2
+Operadores Lógicos : 1
+Operadores Aritméticos : 1
+Asignaciones : 2
+Número Enteros : 1
+Números Decimales : 1
+Incremento : 1
+Decremento : 1
+Cadena de Caracteres : 1
+Comentario : 1
+Comentario de Linea : 1
+Paréntesis : 6
+Llaves : 4
+Errores : 2
