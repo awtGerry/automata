@@ -1,16 +1,16 @@
 /*EsteArchivoEsDeFacil_Lectura_Para_el_Aut%mata*/
 
 if ( numero >= 17.34 ) {
-	dato = 25..18
-	print ( "Hola_Mundo" )
-	valor ++
-	}
+    dato = 25..18
+    print ( "Hola_Mundo" )
+    valor ++
+    }
 
 //Otro_Comentario
-	
+    
 while ( dato != hola && valor <. 5 ) { 
-	x = dato - numero 
-	valor --
+    x = dato - numero 
+    valor --
 }
 
 -----------------------------------------
