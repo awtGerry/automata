@@ -23,20 +23,3 @@ main {
 
     }
 }
------------------------------------
-Palabras reservadas : 12
-Identificadores : 13
-Operadores Relacionales : 5
-Operadores Lógicos : 2
-Operadores Aritméticos : 2
-Asignaciones : 4
-Número Enteros : 10
-Números Decimales : 2
-Incremento : 0
-Decremento : 1
-Cadena de caracteres : 1
-Comentario: 2
-Comentario de Linea : 0
-Paréntesis : 8
-Llaves : 8
-Errores : 2

@@ -75,6 +75,7 @@ impl Application for App {
             Message::Automata => {
                 let content = self.content.text();
                 let automata = Automata::new(content);
+                automata.analyze();
                 Command::none()
             }
             Message::FileSaved(Ok(())) => Command::none(),
