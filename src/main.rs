@@ -123,7 +123,7 @@ impl Application for App {
 }
 
 fn default_file() -> PathBuf {
-    PathBuf::from(format!("{}/files/Archivo_1.txt", env!("CARGO_MANIFEST_DIR")))
+    PathBuf::from(format!("{}/files/Archivo_2.txt", env!("CARGO_MANIFEST_DIR")))
 }
 
 #[derive(Debug, Clone)]

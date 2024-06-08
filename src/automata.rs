@@ -178,11 +178,14 @@ impl Automata {
                     current_token.clear();
                     current_state = 0;
                 }
-                8 => {
+                /* 8 => {
                     if c == '-' {
                         current_token.push(c);
                         tokens.push((current_token.clone(), Token::Decrement));
                         *token_counts.entry(Token::Decrement).or_insert(0) += 1;
+                    } else if c.is_numeric() {
+                        current_token.push(c);
+                        current_state = 2;
                     } else {
                         tokens.push((current_token.clone(), Token::ArithmeticOperator));
                         *token_counts.entry(Token::ArithmeticOperator).or_insert(0) += 1;
@@ -192,6 +195,32 @@ impl Automata {
                     }
                     current_token.clear();
                     current_state = 0;
+
+                } */
+                8 => {
+                    if c == '=' {
+                        current_token.push(c);
+                        tokens.push((current_token.clone(), Token::RelationalOperator));
+                        *token_counts.entry(Token::RelationalOperator).or_insert(0) += 1;
+                        current_token.clear();
+                        current_state = 0;
+                    } else if c == '-' {
+                        current_token.push(c);
+                        tokens.push((current_token.clone(), Token::Decrement));
+                        *token_counts.entry(Token::Decrement).or_insert(0) += 1;
+                        current_token.clear();
+                        current_state = 0;
+                    } else if c.is_numeric() {
+                        current_token.push(c);
+                        current_state = 2;
+                    } else {
+                        tokens.push((current_token.clone(), Token::ArithmeticOperator));
+                        *token_counts.entry(Token::ArithmeticOperator).or_insert(0) += 1;
+                        current_token.clear();
+                        current_state = 0;
+                        continue;
+                    }
+                    current_column += 1;
                 }
                 9 => {
                     tokens.push((current_token.clone(), Token::ArithmeticOperator));
@@ -280,12 +309,18 @@ impl Automata {
                         continue;
                     }
                 }
-                15 => {
+                15 => { // TODO: make sure that the comment is closed with a */ else add an error
+                    // Check if the comment is closed
                     if c == '*' {
                         current_token.push(c);
                         current_state = 17;
-                    } else {
+                    } else { // If the comment is not closed, continue adding characters to the comment
                         current_token.push(c);
+                    }
+
+                    // if the comment is never closed, add an error
+                    if c == '\n' {
+                        errors.push((current_line, current_column, c));
                     }
                 }
                 16 => {
@@ -309,6 +344,11 @@ impl Automata {
                         current_state = 0;
                     } else {
                         current_token.push(c);
+                    }
+
+                    // if the comment is never closed, add an error
+                    if c == '\n' {
+                        errors.push((current_line, current_column, c));
                     }
                 }
                 _ => {
