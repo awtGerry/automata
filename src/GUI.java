@@ -142,63 +142,63 @@ public class GUI {
         field_state2.setText("Enter state 2");
     }
 
-private void convert_pressed() {
-    for (String state : nfa.keySet()) {
-        text_area_nfa.append(state + " : " + nfa.get(state) + "\n");
-    }
-
-    newStatesList = new ArrayList<>();
-    dfa = new HashMap<>();
-    initialState = nfa.keySet().iterator().next();
-    dfa.put(initialState, new HashMap<>());
-
-    for (String path : nfa.get(initialState).keySet()) {
-        String var = String.join("", nfa.get(initialState).get(path));
-        dfa.get(initialState).put(path, var);
-        if (!newStatesList.contains(var)) {
-            newStatesList.add(var);
+    private void convert_pressed() {
+        for (String state : nfa.keySet()) {
+            text_area_nfa.append(state + " : " + nfa.get(state) + "\n");
         }
-    }
 
-    while (!newStatesList.isEmpty()) {
-        String newState = newStatesList.remove(0);
-        dfa.put(newState, new HashMap<>());
-        for (int i = 0; i < newState.length(); i++) {
-            String state = newState.substring(i, i + 1);
-            if (nfa.containsKey(state)) {
-                for (String path : nfa.get(state).keySet()) {
-                    Set<String> temp = new HashSet<>();
-                    for (int j = 0; j < newState.length(); j++) {
-                        temp.addAll(nfa.get(newState.substring(j, j + 1)).get(path));
+        newStatesList = new ArrayList<>();
+        dfa = new HashMap<>();
+        initialState = nfa.keySet().iterator().next();
+        dfa.put(initialState, new HashMap<>());
+
+        for (String path : nfa.get(initialState).keySet()) {
+            String var = String.join("", nfa.get(initialState).get(path));
+            dfa.get(initialState).put(path, var);
+            if (!newStatesList.contains(var)) {
+                newStatesList.add(var);
+            }
+        }
+
+        while (!newStatesList.isEmpty()) {
+            String newState = newStatesList.remove(0);
+            dfa.put(newState, new HashMap<>());
+            for (int i = 0; i < newState.length(); i++) {
+                String state = newState.substring(i, i + 1);
+                if (nfa.containsKey(state)) {
+                    for (String path : nfa.get(state).keySet()) {
+                        Set<String> temp = new HashSet<>();
+                        for (int j = 0; j < newState.length(); j++) {
+                            temp.addAll(nfa.get(newState.substring(j, j + 1)).get(path));
+                        }
+                        String s = String.join("", temp);
+                        if (!dfa.containsKey(s)) {
+                            newStatesList.add(s);
+                            dfa.put(s, new HashMap<>()); // Add new state to DFA
+                        }
+                        dfa.get(newState).put(path, s);
                     }
-                    String s = String.join("", temp);
-                    if (!dfa.containsKey(s)) {
-                        newStatesList.add(s);
-                        dfa.put(s, new HashMap<>()); // Add new state to DFA
-                    }
-                    dfa.get(newState).put(path, s);
                 }
             }
         }
-    }
 
-    for (String state : dfa.keySet()) {
-        text_area_dfa.append(state + " : " + dfa.get(state) + "\n");
-    }
+        for (String state : dfa.keySet()) {
+            text_area_dfa.append(state + " : " + dfa.get(state) + "\n");
+        }
 
-    // Find final states
-    dfaStatesList = dfa.keySet();
-    for (String x : dfaStatesList) {
-        for (int i = 0; i < x.length(); i++) {
-            if (nfaFinalState.contains(x.substring(i, i + 1))) {
-                dfaFinalStates.add(x);
-                break;
+        // Find final states
+        dfaStatesList = dfa.keySet();
+        for (String x : dfaStatesList) {
+            for (int i = 0; i < x.length(); i++) {
+                if (nfaFinalState.contains(x.substring(i, i + 1))) {
+                    dfaFinalStates.add(x);
+                    break;
+                }
             }
         }
-    }
 
-    text_area_dfa.append("\nFinal states of the DFA are: " + dfaFinalStates);
-}
+        text_area_dfa.append("\nFinal states of the DFA are: " + dfaFinalStates);
+    }
 
     /* GUI METHODS */
     private JButton custom_button(JButton button, String txt) {
