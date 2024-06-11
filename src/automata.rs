@@ -32,7 +32,7 @@ impl Automata {
         Automata { content }
     }
 
-    pub fn analyze(&self) {
+    pub fn analyze(&self) -> String {
         let mut tokens = Vec::new();
         let mut errors = Vec::new();
         let mut token_counts: HashMap<Token, usize> = HashMap::new();
@@ -96,6 +96,13 @@ impl Automata {
                 1 => {
                     if c.is_alphabetic() || c.is_numeric() || c == '_' {
                         current_token.push(c);
+                    } else if c == '.' {
+                        errors.push((current_line, current_column, '.'));
+                        tokens.push((current_token.clone(), Token::Identifier));
+                        current_token.push(c); // Add the dot to the current token
+                        current_token.clear();
+                        current_state = 0;
+                        continue;
                     } else {
                         if RESERVED_WORDS.contains(&current_token.as_str()) {
                             tokens.push((current_token.clone(), Token::ReservedWord));
@@ -309,7 +316,7 @@ impl Automata {
                         continue;
                     }
                 }
-                15 => { // TODO: make sure that the comment is closed with a */ else add an error
+                15 => {
                     // Check if the comment is closed
                     if c == '*' {
                         current_token.push(c);
@@ -321,10 +328,13 @@ impl Automata {
                     // if the comment is never closed, add an error
                     if c == '\n' {
                         errors.push((current_line, current_column, c));
+                        current_line += 1;
+                        current_column = 1;
+                        current_state = 0;
                     }
                 }
                 16 => {
-                    if c == '\n' {
+                    if c == '\n' { // If the comment is closed, add the token and reset the current token
                         tokens.push((current_token.clone(), Token::LineComment));
                         *token_counts.entry(Token::LineComment).or_insert(0) += 1;
                         current_token.clear();
@@ -335,7 +345,7 @@ impl Automata {
                         current_token.push(c);
                     }
                 }
-                17 => {
+                17 => { // Comment state
                     if c == '/' {
                         current_token.push(c);
                         tokens.push((current_token.clone(), Token::Comment));
@@ -357,32 +367,24 @@ impl Automata {
             }
         }
 
-        println!("Tokens:");
-        for (token, token_type) in tokens {
-            println!("{} : {:?}", token, token_type);
-        }
+        let mut result = String::new();
+        result.push_str(&format!("Palabras reservadas : {}\n", token_counts.get(&Token::ReservedWord).unwrap_or(&0)));
+        result.push_str(&format!("Identificadores : {}\n", token_counts.get(&Token::Identifier).unwrap_or(&0)));
+        result.push_str(&format!("Operadores Relacionales : {}\n", token_counts.get(&Token::RelationalOperator).unwrap_or(&0)));
+        result.push_str(&format!("Operadores Lógicos : {}\n", token_counts.get(&Token::LogicalOperator).unwrap_or(&0)));
+        result.push_str(&format!("Operadores Aritméticos : {}\n", token_counts.get(&Token::ArithmeticOperator).unwrap_or(&0)));
+        result.push_str(&format!("Asignaciones : {}\n", token_counts.get(&Token::Assignment).unwrap_or(&0)));
+        result.push_str(&format!("Número Enteros : {}\n", token_counts.get(&Token::Integer).unwrap_or(&0)));
+        result.push_str(&format!("Números Decimales : {}\n", token_counts.get(&Token::Decimal).unwrap_or(&0)));
+        result.push_str(&format!("Incremento : {}\n", token_counts.get(&Token::Increment).unwrap_or(&0)));
+        result.push_str(&format!("Decremento : {}\n", token_counts.get(&Token::Decrement).unwrap_or(&0)));
+        result.push_str(&format!("Cadena de Caracteres : {}\n", token_counts.get(&Token::String).unwrap_or(&0)));
+        result.push_str(&format!("Comentario : {}\n", token_counts.get(&Token::Comment).unwrap_or(&0)));
+        result.push_str(&format!("Comentario de Linea : {}\n", token_counts.get(&Token::LineComment).unwrap_or(&0)));
+        result.push_str(&format!("Paréntesis : {}\n", token_counts.get(&Token::Parenthesis).unwrap_or(&0)));
+        result.push_str(&format!("Llaves : {}\n", token_counts.get(&Token::Brace).unwrap_or(&0)));
+        result.push_str(&format!("Errores : {}\n", errors.len()));
 
-        println!("\nErrores:");
-        for (line, column, c) in &errors {
-            println!("Error en la línea {} y columna {} con el caracter {}", line, column, c);
-        }
-
-        println!("\nSummary:");
-        println!("Palabras reservadas : {}", token_counts.get(&Token::ReservedWord).unwrap_or(&0));
-        println!("Identificadores : {}", token_counts.get(&Token::Identifier).unwrap_or(&0));
-        println!("Operadores Relacionales : {}", token_counts.get(&Token::RelationalOperator).unwrap_or(&0));
-        println!("Operadores Lógicos : {}", token_counts.get(&Token::LogicalOperator).unwrap_or(&0));
-        println!("Operadores Aritméticos : {}", token_counts.get(&Token::ArithmeticOperator).unwrap_or(&0));
-        println!("Asignaciones : {}", token_counts.get(&Token::Assignment).unwrap_or(&0));
-        println!("Número Enteros : {}", token_counts.get(&Token::Integer).unwrap_or(&0));
-        println!("Números Decimales : {}", token_counts.get(&Token::Decimal).unwrap_or(&0));
-        println!("Incremento : {}", token_counts.get(&Token::Increment).unwrap_or(&0));
-        println!("Decremento : {}", token_counts.get(&Token::Decrement).unwrap_or(&0));
-        println!("Cadena de Caracteres : {}", token_counts.get(&Token::String).unwrap_or(&0));
-        println!("Comentario : {}", token_counts.get(&Token::Comment).unwrap_or(&0));
-        println!("Comentario de Linea : {}", token_counts.get(&Token::LineComment).unwrap_or(&0));
-        println!("Paréntesis : {}", token_counts.get(&Token::Parenthesis).unwrap_or(&0));
-        println!("Llaves : {}", token_counts.get(&Token::Brace).unwrap_or(&0));
-        println!("Errores : {}", errors.len());
+        result
     }
 }

@@ -23,6 +23,7 @@ fn main() -> iced::Result {
 struct App {
     path: Option<PathBuf>,
     content: text_editor::Content,
+    result: String,
     error: Option<Error>,
 }
 
@@ -47,6 +48,7 @@ impl Application for App {
             Self {
                 path: None,
                 content: text_editor::Content::new(),
+                result: String::new(),
                 error: None,
             },
             Command::perform(
@@ -75,7 +77,7 @@ impl Application for App {
             Message::Automata => {
                 let content = self.content.text();
                 let automata = Automata::new(content);
-                automata.analyze();
+                self.result = automata.analyze();
                 Command::none()
             }
             Message::FileSaved(Ok(())) => Command::none(),
@@ -111,6 +113,7 @@ impl Application for App {
         let content = column![
             controls,
             editor,
+            text(&self.result).size(10),
             file_path,
         ].spacing(10);
 

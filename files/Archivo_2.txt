@@ -4,7 +4,7 @@ main {
     String texto = "HolaMundo"
 
     switch ( numero ) {
-        case 5 
+        case 5
             if ( 3.5 >= 8 && dato < 16 ) {
             /*Esto_deberia_funcionar()*/
             /*Para_el_automata{}*/
