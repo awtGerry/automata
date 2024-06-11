@@ -1,0 +1,518 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/nixos.org) (preloaded format=pdflatex 1980.1.1)  11 JUN 2024 15:06
+entering extended mode
+ \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**map.tex
+(./map.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-02-20>
+(/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/base/size10.clo
+File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count188
+\c@section=\count189
+\c@subsection=\count190
+\c@subsubsection=\count191
+\c@paragraph=\count192
+\c@subparagraph=\count193
+\c@figure=\count194
+\c@table=\count195
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/babel/babel.sty
+Package: babel 2024/02/07 v24.2 The Babel package
+\babel@savecnt=\count196
+\U@D=\dimen141
+\l@unhyphenated=\language89
+ (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count197
+ (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: Hyphen rules for 'canadian' set to \l@english
+(babel)             (\language0). Reported on input line 102.
+Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
+(babel)             (\language23). Reported on input line 105.
+Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
+(babel)             (\language23). Reported on input line 108.
+)) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/babel/locale/en/babel-english.tex
+Package babel Info: Importing font and identification data for english
+(babel)             from babel-en.ini. Reported on input line 11.
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/ragged2e/ragged2e.sty
+Package: ragged2e 2023/06/22 v3.6 ragged2e Package
+ (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/footmisc/footmisc.sty
+Package: footmisc 2023/07/05 v6.0f a miscellany of footnote facilities
+\FN@temptoken=\toks19
+\footnotemargin=\dimen142
+\@outputbox@depth=\dimen143
+Package footmisc Info: Declaring symbol style bringhurst on input line 696.
+Package footmisc Info: Declaring symbol style chicago on input line 704.
+Package footmisc Info: Declaring symbol style wiley on input line 713.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 724.
+Package footmisc Info: Declaring symbol style lamport* on input line 744.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 765.
+)
+\CenteringLeftskip=\skip50
+\RaggedLeftLeftskip=\skip51
+\RaggedRightLeftskip=\skip52
+\CenteringRightskip=\skip53
+\RaggedLeftRightskip=\skip54
+\RaggedRightRightskip=\skip55
+\CenteringParfillskip=\skip56
+\RaggedLeftParfillskip=\skip57
+\RaggedRightParfillskip=\skip58
+\JustifyingParfillskip=\skip59
+\CenteringParindent=\skip60
+\RaggedLeftParindent=\skip61
+\RaggedRightParindent=\skip62
+\JustifyingParindent=\skip63
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2023/05/13 v2.17o AMS math features
+\@mathmargin=\skip64
+
+For additional information on amsmath, use the `?' option.
+(/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks20
+\ex@=\dimen144
+)) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen145
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count198
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count199
+\leftroot@=\count266
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count267
+\DOTSCASE@=\count268
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen146
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count269
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count270
+\dotsspace@=\muskip16
+\c@parentequation=\count271
+\dspbrk@lvl=\count272
+\tag@help=\toks21
+\row@=\count273
+\column@=\count274
+\maxfields@=\count275
+\andhelp@=\toks22
+\eqnshift@=\dimen147
+\alignsep@=\dimen148
+\tagshift@=\dimen149
+\tagwidth@=\dimen150
+\totwidth@=\dimen151
+\lineht@=\dimen152
+\@envbody=\toks23
+\multlinegap=\skip65
+\multlinetaggap=\skip66
+\mathdisplay@stack=\toks24
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks25
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+ (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen153
+\Gin@req@width=\dimen154
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/scalerel/scalerel.sty
+Package: scalerel 2016/12/29 v1.8 Routines for constrained scaling and stretching of objects, relative to a reference object or in absolute terms
+ (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/tools/calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count276
+\calc@Bcount=\count277
+\calc@Adimen=\dimen155
+\calc@Bdimen=\dimen156
+\calc@Askip=\skip67
+\calc@Bskip=\skip68
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count278
+\calc@Cskip=\skip69
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count279
+)
+\thesrwidth=\skip70
+\thesrheight=\skip71
+\srblobheight=\skip72
+\srblobdepth=\skip73
+\mnxsrwidth=\skip74
+\LMex=\skip75
+\LMpt=\skip76
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/pgf/frontendlayer/tikz.sty (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/pgf/basiclayer/pgf.sty (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/pgf/utilities/pgfrcs.sty (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks26
+\pgfutil@tempdima=\dimen157
+\pgfutil@tempdimb=\dimen158
+)
+(/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box53
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/utilities/pgfrcs.code.tex (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+ (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/pgf/basiclayer/pgfcore.sty (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/pgf/systemlayer/pgfsys.sty (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+ (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks27
+\pgfkeys@temptoks=\toks28
+ (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks29
+))
+\pgf@x=\dimen159
+\pgf@y=\dimen160
+\pgf@xa=\dimen161
+\pgf@ya=\dimen162
+\pgf@xb=\dimen163
+\pgf@yb=\dimen164
+\pgf@xc=\dimen165
+\pgf@yc=\dimen166
+\pgf@xd=\dimen167
+\pgf@yd=\dimen168
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count280
+\c@pgf@countb=\count281
+\c@pgf@countc=\count282
+\c@pgf@countd=\count283
+\t@pgf@toka=\toks30
+\t@pgf@tokb=\toks31
+\t@pgf@tokc=\toks32
+\pgf@sys@id@count=\count284
+ (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-pdftex.def
+ (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+ (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+))) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count285
+\pgfsyssoftpath@bigbuffer@items=\count286
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+ (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+ (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+
+(/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/math/pgfmath.code.tex (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/math/pgfmathutil.code.tex) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen169
+\pgfmath@count=\count287
+\pgfmath@box=\box54
+\pgfmath@toks=\toks33
+\pgfmath@stack@operand=\toks34
+\pgfmath@stack@operation=\toks35
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count288
+)) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/math/pgfint.code.tex) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen170
+\pgf@picmaxx=\dimen171
+\pgf@picminy=\dimen172
+\pgf@picmaxy=\dimen173
+\pgf@pathminx=\dimen174
+\pgf@pathmaxx=\dimen175
+\pgf@pathminy=\dimen176
+\pgf@pathmaxy=\dimen177
+\pgf@xx=\dimen178
+\pgf@xy=\dimen179
+\pgf@yx=\dimen180
+\pgf@yy=\dimen181
+\pgf@zx=\dimen182
+\pgf@zy=\dimen183
+)
+(/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen184
+\pgf@path@lasty=\dimen185
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen186
+\pgf@shorten@start@additional=\dimen187
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box55
+\pgf@hbox=\box56
+\pgf@layerbox@main=\box57
+\pgf@picture@serial@count=\count289
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen188
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen189
+\pgf@pt@y=\dimen190
+\pgf@pt@temp=\dimen191
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen192
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen193
+\pgf@sys@shading@range@num=\count290
+\pgf@shadingcount=\count291
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box58
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box59
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen194
+\pgf@nodesepend=\dimen195
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+)) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/pgf/utilities/pgffor.sty (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/pgf/utilities/pgfkeys.sty (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/pgf/math/pgfmath.sty (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/math/pgfmath.code.tex)) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen196
+\pgffor@skip=\dimen197
+\pgffor@stack=\toks36
+\pgffor@toks=\toks37
+)) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+ (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count292
+\pgfplotmarksize=\dimen198
+)
+\tikz@lastx=\dimen199
+\tikz@lasty=\dimen256
+\tikz@lastxsaved=\dimen257
+\tikz@lastysaved=\dimen258
+\tikz@lastmovetox=\dimen259
+\tikz@lastmovetoy=\dimen260
+\tikzleveldistance=\dimen261
+\tikzsiblingdistance=\dimen262
+\tikz@figbox=\box60
+\tikz@figbox@bg=\box61
+\tikz@tempbox=\box62
+\tikz@tempbox@bg=\box63
+\tikztreelevel=\count293
+\tikznumberofchildren=\count294
+\tikznumberofcurrentchild=\count295
+\tikz@fig@count=\count296
+ (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count297
+\pgfmatrixcurrentcolumn=\count298
+\pgf@matrix@numberofcolumns=\count299
+)
+\tikz@expandcount=\count300
+ (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryautomata.code.tex
+File: tikzlibraryautomata.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.multipart.code.tex
+File: tikzlibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.multipart.code.tex
+File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodepartlowerbox=\box64
+\pgfnodeparttwobox=\box65
+\pgfnodepartthreebox=\box66
+\pgfnodepartfourbox=\box67
+\pgfnodeparttwentybox=\box68
+\pgfnodepartnineteenbox=\box69
+\pgfnodeparteighteenbox=\box70
+\pgfnodepartseventeenbox=\box71
+\pgfnodepartsixteenbox=\box72
+\pgfnodepartfifteenbox=\box73
+\pgfnodepartfourteenbox=\box74
+\pgfnodepartthirteenbox=\box75
+\pgfnodeparttwelvebox=\box76
+\pgfnodepartelevenbox=\box77
+\pgfnodeparttenbox=\box78
+\pgfnodepartninebox=\box79
+\pgfnodeparteightbox=\box80
+\pgfnodepartsevenbox=\box81
+\pgfnodepartsixbox=\box82
+\pgfnodepartfivebox=\box83
+))) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\arrowsize=\dimen263
+)) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count301
+\l__pdf_internal_box=\box84
+) (./map.aux)
+\openout1 = `map.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+Package ragged2e Info: ABD: executing \RaggedRight on input line 24.
+ (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count302
+\scratchdimen=\dimen264
+\scratchbox=\box85
+\nofMPsegments=\count303
+\nofMParguments=\count304
+\everyMPshowfont=\toks38
+\MPscratchCnt=\count305
+\MPscratchDim=\dimen265
+\MPnumerator=\count306
+\makeMPintoPDFobject=\count307
+\everyMPtoPDFconversion=\toks39
+) (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+LaTeX Font Info:    Trying to load font information for U+msa on input line 25.
+ (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 25.
+ (/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+<~/Documents/ceti/ceti_logo.png, id=4, 623.32875pt x 481.8pt>
+File: ~/Documents/ceti/ceti_logo.png Graphic file (type png)
+<use ~/Documents/ceti/ceti_logo.png>
+Package pdftex.def Info: ~/Documents/ceti/ceti_logo.png  used on input line 26.
+(pdftex.def)             Requested size: 345.0pt x 266.66699pt.
+ [1
+
+{/nix/store/s9dgbn15lrgh28z10yljba8qzwypnjcq-texlive-2023-env/share/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/fonts/enc/dvips/cm-super/cm-super-t1.enc} </home/gerry/Documents/ceti/ceti_logo.png>]
+
+./map.tex:113: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.113 \end{tikzpicture}
+                       
+This error message was generated by an \errmessage
+command, so I can't give any explicit help.
+Pretend that you're Hercule Poirot: Examine all clues,
+and deduce the truth by order and method.
+
+[2] (./map.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-02-20>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 16512 strings out of 474116
+ 347546 string characters out of 5720541
+ 1956187 words of memory out of 5000000
+ 38594 multiletter control sequences out of 15000+600000
+ 568251 words of font info for 67 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 88i,12n,93p,430b,978s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/fonts/type1/public/amsfonts/cm/cmex10.pfb></nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/fonts/type1/public/amsfonts/cm/cmr10.pfb></nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/fonts/type1/public/cm-super/sfbx1440.pfb></nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/fonts/type1/public/cm-super/sfrm1000.pfb></nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/fonts/type1/public/cm-super/sfrm1200.pfb></nix/store/lkhnjl3m4jzlk9s89aw8x44w6dwp171s-texlive-2023-env-texmfdist/fonts/type1/public/cm-super/sfrm1728.pfb>
+Output written on map.pdf (2 pages, 125641 bytes).
+PDF statistics:
+ 58 PDF objects out of 1000 (max. 8388607)
+ 35 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -51,7 +51,7 @@ impl Automata {
                     } else if c.is_numeric() {
                         current_token.push(c);
                         current_state = 2;
-                    } else if c == '"' {
+                    } else if c == '"' { // case for strings
                         current_token.push(c);
                         current_state = 3;
                     } else if c == '/' {
@@ -306,7 +306,7 @@ impl Automata {
                     if c.is_numeric() {
                         current_token.push(c);
                     } else {
-                        if !flag {
+                        if !flag { // If there is no error, add the token
                             tokens.push((current_token.clone(), Token::Decimal));
                             *token_counts.entry(Token::Decimal).or_insert(0) += 1;
                         }
